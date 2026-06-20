@@ -6,12 +6,12 @@ ENV HOME=/root
 ENV LANG=en_US.UTF-8
 
 # Install dependencies and Emacs
+    # emacs \
+    # emacs-source \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     ca-certificates \
     curl \
-    emacs \
-    emacs-source \
     git \
     gnutls-bin \
     gnupg \
