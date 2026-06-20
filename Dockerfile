@@ -28,6 +28,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gnutls-bin \
     gnupg \
     locales \
+    screen \
+    sudo \
     wget \
     xdg-utils \
     && locale-gen en_US.UTF-8 \
