@@ -8,6 +8,18 @@ ENV LANG=en_US.UTF-8
 # Install dependencies and Emacs
     # emacs \
     # emacs-source \
+    # libgif-dev \
+    # libjpeg-dev \
+    # libm17n-dev \
+    # libotf-dev \
+    # libpng-dev \
+    # librsvg2-dev \
+    # libtiff-dev \
+    # libx11-dev \
+    # libxext-dev \
+    # libxfont-dev \
+    # libxpm-dev \
+    # libxrandr-dev \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     ca-certificates \
@@ -15,18 +27,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     gnutls-bin \
     gnupg \
-    libgif-dev \
-    libjpeg-dev \
-    libm17n-dev \
-    libotf-dev \
-    libpng-dev \
-    librsvg2-dev \
-    libtiff-dev \
-    libx11-dev \
-    libxext-dev \
-    libxfont-dev \
-    libxpm-dev \
-    libxrandr-dev \
     locales \
     wget \
     xdg-utils \
@@ -38,8 +38,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN git clone https://github.com/syl20bnr/spacemacs ${HOME}/.emacs.d
 
 # Clone dotfiles
-RUN git clone https://github.com/pault-tech/dotfiles ${HOME}/
-RUN git clone https://github.com/pault-tech/dotfiles-spacemacs ${HOME}/
+RUN git clone https://github.com/pault-tech/dotfiles
+RUN git clone https://github.com/pault-tech/dotfiles-spacemacs
 
 #setup dotfiles
 RUN ${HOME}/dotfiles/setup.sh
