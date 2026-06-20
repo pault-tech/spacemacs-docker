@@ -38,8 +38,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN git clone https://github.com/syl20bnr/spacemacs ${HOME}/.emacs.d
 
 # Clone dotfiles
-RUN git clone https://github.com/pault-tech/dotfiles
-RUN git clone https://github.com/pault-tech/dotfiles-spacemacs
+RUN git clone https://github.com/pault-tech/dotfiles ${HOME}/dotfiles
+RUN git clone https://github.com/pault-tech/dotfiles-spacemacs ${HOME}/dotfiles-spacemacs
 
 #setup dotfiles
 RUN ${HOME}/dotfiles/setup.sh
